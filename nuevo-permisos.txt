@@ -1,0 +1,39 @@
+Si el permiso es 1(administrador) habilito los siguientes módulos: AgregarDispositivos, EliminarDispositivos, ActualizarDispositivos, IniciarSesion, AgregarUsuarios, EliminarUsuarios, ModificarUsuarios, GestionarAuditorias.
+
+si el permiso es 2(Personal), habilito los siguientes módulos: IniciarSesion, ListarDispositivos, GeneraREserva, CancelaREserva y ActualizaReserva.
+
+Si el permiso es 3(Usuario) le habilito que pueda hacer BuscarReservas e IniciarSesion
+
+
+menues(Muestra las opciones del menú)
+------
+codigoMenu
+codigoNivel -> mostrará solo a los usuarios que figuren con este código
+descripcionMenu -> puede tener menu pero no poseer submenues
+descripcionSubMenu
+estado -> mostrará a los que tengan habilitado, pueden tener codigoNivel correspondiente para ver pero no estar habilitado(1=True o 0=False)
+
+select * from menues.codigoNivel = usuario.nivelUser and estado=1
+
+Grupos (muestra los grupos disponibles)
+------
+id
+descripcion
+nivel
+estado
+
+Usuario
+-------
+codigoUsuario
+nombre
+mailActual
+usuario
+password
+nivelUser
+imagen
+estatus
+ultimoLogin -> ultima vez que se conectó el usuario
+fechaCreacion
+fechaModificacion -> fecha de modificacion de datos
+usuarioModificacion -> quien hizo el cambio de datos
+mailAnterior -> mail anterior al cambio
